@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import React, { useState }  from 'react';
 
 import Peso from './componentes/Peso';
@@ -26,6 +26,11 @@ export default function App() {
     }
     const imc = peso / (Math.pow(altura, 2))
     setResultado(imc.toFixed(1))
+
+    if(imc < 18.5) {
+      alert('Você está abaixo do peso. Procure um especialista')
+      return
+    }
   }
   
   return (
@@ -35,7 +40,7 @@ export default function App() {
       <Titulo/>
       <Peso aoModificar={setPeso}/>
       <Altura aoModificar={setAltura}/>
-      <BotaoCalcular aoClicar={calcImc}/>
+      <BotaoCalcular aoClicar={calcImc} tituloDoBotao='Calcular IMC'/>
       <Resultado resultado={resultado}/>
       <Tabela/>
     </View>
@@ -52,5 +57,5 @@ const styles = StyleSheet.create({
   bloco: {
     marginBottom: 20,
     width: '100%'
-  },
+  }
 });

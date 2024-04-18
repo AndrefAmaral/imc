@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, TextInput} from 'react-native';
 export default props=>{
     return(
       <View style={styles.bloco}>
-        <Text>Informe a sua altura</Text>
+        <Text>Informe a sua altura (m)</Text>
         <TextInput
           style={styles.textInput}
           autoFocus={false}

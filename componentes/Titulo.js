@@ -1,6 +1,6 @@
 import {StyleSheet, View, Text } from 'react-native';
 
-export default function Titulo (){
+export default function Titulo() {
     return(
       <View style={styles.bloco}>
         <Text style={styles.titulo}>Calculadora de IMC</Text>

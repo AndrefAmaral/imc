@@ -3,7 +3,7 @@ import {StyleSheet, View, Text, TextInput} from 'react-native';
 export default props=>{
     return(
       <View style={styles.bloco}>
-        <Text>Informe o seu peso</Text>
+        <Text>Informe o seu peso (Kg)</Text>
         <TextInput
           style={styles.textInput}
           autoFocus={true}

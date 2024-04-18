@@ -7,7 +7,7 @@ export default props=>{
             style={styles.botao} 
             onPress={props.aoClicar}
         >
-          <Text style={styles.textoBotao}>Calcular IMC</Text>
+          <Text style={styles.textoBotao}>{props.tituloDoBotao}</Text>
         </TouchableOpacity>
       </View>
     )
