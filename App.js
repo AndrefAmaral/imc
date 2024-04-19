@@ -36,6 +36,12 @@ export default function App() {
     }
   }
   
+  function zerar() {
+    setPeso(0)
+    setAltura(0)
+    setResultado('')
+  }
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -44,6 +50,7 @@ export default function App() {
       <Peso aoModificar={setPeso}/>
       <Altura aoModificar={setAltura}/>
       <BotaoCalcular aoClicar={calcImc} tituloDoBotao='Calcular IMC'/>
+      <BotaoCalcular aoClicar={zerar} tituloDoBotao='Limpar dados'/>
       <Resultado resultado={resultado}/>
       <Tabela/>
     </View>
