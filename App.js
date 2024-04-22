@@ -11,16 +11,16 @@ import Titulo from './componentes/Titulo';
 
 
 export default function App() {
-  const [peso, setPeso]=useState(0)
-  const [altura, setAltura]=useState(0)
-  const [resultado, setResultado]=useState()
+  const [peso, setPeso]=useState('')
+  const [altura, setAltura]=useState('')
+  const [resultado, setResultado]=useState('')
 
   function calcImc() {
     if(peso == 0 || !peso){
       alert('Informe o peso')
       return
     }
-    if(altura == 0 || !peso){
+    if(altura == 0 || !altura){
       alert('Informe a altura')
       return
     }
@@ -37,8 +37,8 @@ export default function App() {
   }
   
   function zerar() {
-    setPeso(0)
-    setAltura(0)
+    setPeso('')
+    setAltura('')
     setResultado('')
   }
 
@@ -47,8 +47,8 @@ export default function App() {
       <StatusBar style="auto" />
       
       <Titulo/>
-      <Peso aoModificar={setPeso}/>
-      <Altura aoModificar={setAltura}/>
+      <Peso aoModificar={setPeso} peso={peso}/>
+      <Altura aoModificar={setAltura} altura={altura}/>
       <BotaoCalcular aoClicar={calcImc} tituloDoBotao='Calcular IMC'/>
       <BotaoCalcular aoClicar={zerar} tituloDoBotao='Limpar dados'/>
       <Resultado resultado={resultado}/>

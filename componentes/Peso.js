@@ -8,7 +8,7 @@ export default props=>{
           style={styles.textInput}
           autoFocus={true}
           keyboardType='numeric'
-          value={props.text}
+          value={props.peso}
           onChangeText={newText => props.aoModificar(newText)}
         />
       </View>
